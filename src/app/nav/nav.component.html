@@ -14,7 +14,11 @@
       </li>
     </ul>
 
+    
     <div *ngIf="loggedIn()" class="dropdown">
+      <span class="mr-1">
+        <img src="{{photoUrl}}" alt="">
+      </span>
       <button class="dropbtn">Welcome {{authService.decodedToken?.unique_name | titlecase}}</button>
       <div class="dropdown-content">
         <a [routerLink]="['/member/edit']">Edit Profile</a>
@@ -31,6 +35,4 @@
     </form>
 
   </div>
-
-  
 </nav>
